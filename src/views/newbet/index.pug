@@ -1,0 +1,153 @@
+doctype html
+head
+  meta(name='viewport' content='width=device-width')
+  meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+  title Nova aposta realizada
+  style.
+    @media only screen and (min-width: 1181px) {
+    .container {
+    background-color: red;
+    }
+    .btn-primary table td:hover {
+    background-color: #34495e !important;
+    }
+    .btn-primary a:hover {
+    background-color: #34495e !important;
+    border-color: #34495e !important;
+    }
+    .nav {
+    font-weight: 500;
+    font: italic normal bold arial;
+    border-bottom: 1px solid #ebebeb;
+    width: 100vw;
+    max-width: 1080px;
+    display: flex;
+    align-content: flex-end;
+    margin: auto;
+    padding: 0;
+    }
+    .title {
+    color: #707070 !important;
+    left: 141px;
+    width: 86px;
+    height: 53px;
+    text-align: center;
+    font: italic normal bold 44px/70px arial;
+    letter-spacing: 0px;
+    opacity: 1;
+    padding-left: 10px;
+    }
+    .title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 108px;
+    border-bottom: 6px solid #b5c401;
+    border-radius: 6px;
+    pointer-events: none;
+    transform: translateX(-10px) translateY(-9px);
+    }
+    .content{
+    width: 100vw;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0;
+    }
+    .contentleft {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 30px;
+    }
+    .contentli {
+    margin-left: 20px;
+    font: italic normal bold 20px arial;
+    }
+    }
+    @media only screen and (max-width: 620px) {
+    }
+    /* -------------------------------------
+    PRESERVE THESE STYLES IN THE HEAD
+    ------------------------------------- */
+    @media all {
+    .container {
+    background-color: red;
+    }
+    .btn-primary table td:hover {
+    background-color: #34495e !important;
+    }
+    .btn-primary a:hover {
+    background-color: #34495e !important;
+    border-color: #34495e !important;
+    }
+    .nav {
+    font-weight: 500;
+    font: italic normal bold arial;
+    border-bottom: 1px solid #ebebeb;
+    width: 100vw;
+    max-width: 1080px;
+    display: flex;
+    align-content: flex-end;
+    margin: auto;
+    padding: 0;
+    }
+    .title {
+    color: #707070 !important;
+    left: 141px;
+    width: 86px;
+    height: 53px;
+    text-align: center;
+    font: italic normal bold 44px/70px arial;
+    letter-spacing: 0px;
+    opacity: 1;
+    padding-left: 10px;
+    }
+    .title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 108px;
+    border-bottom: 6px solid #b5c401;
+    border-radius: 6px;
+    pointer-events: none;
+    transform: translateX(-10px) translateY(-9px);
+    }
+    .content{
+    width: 100vw;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0;
+    }
+    .contentleft {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 30px;
+    }
+    .contentli {
+    margin-left: 20px;
+    font: italic normal bold 20px arial;
+    }
+    }
+div(classname='container') 
+  span.preheader(style='color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;') This is preheader text. Some clients will show this text as a preview.
+  nav(classname='nav')
+    ul(classname='content')
+      ul(classname='contentleft')
+        a(classname='title') TGL
+
+  p Jogo realizado por #{ name }, no valor de #{ total }.
+  p Jogo realizado no dia: #{ data }.
+  h2 Detalhes
+  each game in games
+    p Jogo #{game.game.type}, foi feito com os números: #{ game.numbers }, valor #{game.price}
